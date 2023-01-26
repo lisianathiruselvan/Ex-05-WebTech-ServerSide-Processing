@@ -120,8 +120,20 @@ def rectarea(request):
         print('Area=', area)
     return render(request,"myapp/math.html",context)
 ```
+## URLS:
+```
+from django.contrib import admin
+from django.urls import path
+from myapp import views
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('area/',views.rectarea),
+]
+
+```
 
 # OUTPUT:
+![serverout](https://user-images.githubusercontent.com/119389971/214882015-afa811b5-c238-4d1e-9297-5ef17ebf4996.jpg)
 
 # RESULT:
 
